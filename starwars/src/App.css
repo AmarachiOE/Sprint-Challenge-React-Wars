@@ -2,7 +2,15 @@
   text-align: center;
 }
 .Header {
-  color: #443e3e;
+  color: black;
   text-shadow: 1px 1px 5px #fff;
+  background: pink;
+  width: 90%;
+  margin: 40px auto;
+  height: 50px;
+  padding: 20px 0;
+  border-radius: 20px;
+  border: 4px solid black;
 }
+
 /* write your parent styles in here for your App.js */
