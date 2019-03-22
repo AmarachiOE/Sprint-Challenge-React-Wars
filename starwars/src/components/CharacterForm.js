@@ -1,5 +1,5 @@
 import React from 'react';
-import "./CharacterForm.css";
+import "./Characters.css";
 
 const CharacterForm = props => {
     return(

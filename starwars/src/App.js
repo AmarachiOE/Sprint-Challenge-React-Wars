@@ -42,6 +42,31 @@ class App extends Component {
 
   };
 
+  // toggleCharacter = created => {
+  //   this.setState({
+  //     starwarsChars: this.state.starwarsChars.map( character => {
+  //       if (character.created === created) {
+  //         return {
+  //           ...character,
+  //           remove: !character.remove
+  //         };
+  //       }
+  //       return character;
+  //     })
+  //   });
+  // };
+
+  // clearRemoved = event => {
+  //   event.preventDefault();
+
+  //   const remainingCharacters =
+  //   this.state.starwarsChars.filter( character => {
+  //     return !character.remove === true;
+  //   });
+
+  //   this.setState({ starwarsChars: remainingCharacters });
+  // };
+
   componentDidMount() {
     this.getCharacters('https://swapi.co/api/people/');
   }
