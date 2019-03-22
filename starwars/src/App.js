@@ -23,6 +23,25 @@ class App extends Component {
     });
   };
 
+  // for adding NEW characters
+  updateList = event => {
+    event.preventDefault(); // no refreshing
+
+    const newCharacter = {
+      name: this.state.name,
+      birth_year: this.state.birth_year,
+      gender: this.state.gender,
+      eye_color: this.state.eye_color,
+      created: Date.now(),
+      remove: false 
+    };
+
+    this.setState({
+      starwarsChars: [...this.state.starwarsChars, newCharacter]
+    });
+
+  };
+
   componentDidMount() {
     this.getCharacters('https://swapi.co/api/people/');
   }
@@ -55,7 +74,8 @@ class App extends Component {
         birth_year={this.state.birth_year}
         gender={this.state.gender}
         eye_color={this.state.eye_color}
-        handleChanges={this.handleChanges}/>
+        handleChanges={this.handleChanges}
+        updateList={this.updateList}/>
       </div>
     );
   }

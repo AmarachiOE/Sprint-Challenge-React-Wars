@@ -28,6 +28,7 @@ const CharacterForm = props => {
             onChange={props.handleChanges}
             placeholder="What color are their eyes?"
             />
+            <button onClick={props.updateList}>Add New Star Wars Character</button>
         </form>
     );
 };
