@@ -8,7 +8,8 @@ class App extends Component {
   constructor() {
     super();
     this.state = {
-      starwarsChars: []
+      starwarsChars: [],
+      character: "",
     };
   }
 
@@ -36,7 +37,9 @@ class App extends Component {
     return (
       <div className="App">
         <h1 className="Header">React Wars</h1>
-        <CharacterList />
+        <CharacterList 
+        starwarsChars={this.state.starwarsChars}
+        />
         <CharacterForm />
       </div>
     );
