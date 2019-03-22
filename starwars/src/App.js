@@ -9,9 +9,19 @@ class App extends Component {
     super();
     this.state = {
       starwarsChars: [],
-      character: "",
+      name: "",
+      birth_year: "",
+      gender: "",
+      eye_color: "",
     };
   }
+
+  handleChanges = event => {
+    console.log("event:", event.target);
+    this.setState({
+      [event.target.name]: event.target.value
+    });
+  };
 
   componentDidMount() {
     this.getCharacters('https://swapi.co/api/people/');
@@ -40,7 +50,12 @@ class App extends Component {
         <CharacterList 
         starwarsChars={this.state.starwarsChars}
         />
-        <CharacterForm />
+        <CharacterForm 
+        name={this.state.name}
+        birth_year={this.state.birth_year}
+        gender={this.state.gender}
+        eye_color={this.state.eye_color}
+        handleChanges={this.handleChanges}/>
       </div>
     );
   }
